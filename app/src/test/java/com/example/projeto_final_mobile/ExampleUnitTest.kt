@@ -1,4 +1,4 @@
-package com.example.projeto_final_mobille
+package com.example.projeto_final_mobile
 
 import org.junit.Test
 

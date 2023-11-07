@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Projeto_Final_Mobille"
+rootProject.name = "Projeto_Final_Mobile"
 include(":app")
  
