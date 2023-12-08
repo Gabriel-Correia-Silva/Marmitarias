@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,43 +15,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.Projeto_Final_Mobile"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".ComentariosUsuario"
-            android:exported="false" />
-        <activity
-            android:name=".PratoMarmitaria"
-            android:exported="false" />
-        <activity
-            android:name=".ItemMarmita"
-            android:exported="false" />
-        <activity
-            android:name=".ConteudoMarmitaria"
-            android:exported="false" />
-        <activity
-            android:name=".ItemLayout"
-            android:exported="false" />
-        <activity
-            android:name=".MenuGaveta"
-            android:exported="false" />
-        <activity
-            android:name=".FragmentMap"
-            android:exported="false" />
-        <activity
-            android:name=".RecyclerViewFragment"
-            android:exported="false"
-            android:label="@string/title_activity_recycler_view_fragment"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -60,18 +32,32 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="${MAPS_API_KEY}" />
 
         <activity
-            android:name=".Cadastro"
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".fragments.DescricaoActivity"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".screens.cadastro.SingUp"
             android:exported="false" />
-        <activity android:name=".MainScreen" />
-        <activity android:name=".AlterarDados" />
         <activity
-            android:name=".MainActivity"
+            android:name=".screens.home.MapaMarmitariasFragment"
+            android:exported="false" />
+        <activity
+            android:name=".screens.home.ListaMarmitariasFragment"
+            android:exported="false" />
+        <activity
+            android:name=".screens.drawer.NavegationDrawerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".screens.home.MainAll"
+            android:exported="false" />
+        <activity
+            android:name=".screens.login.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

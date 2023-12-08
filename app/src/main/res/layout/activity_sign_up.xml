@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".screens.cadastro.SingUp">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botao_retornar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#00FFFFFF"
+        android:drawableRight="@drawable/caret_right_4"
+        android:gravity="right"
+        android:paddingRight="22dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TextViewcadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Cadastro"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botao_retornar" />
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="791dp"
+        android:foregroundGravity="center"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewcadastro"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imagePerfil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/person"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/adicionar_foto_cadastro"
+                android:layout_width="250sp"
+                android:layout_height="36sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/rounded_to_button"
+                android:text="@string/adicionar_foto"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@color/cinza"
+                app:elevation="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:text="Nome"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/nome_cadastro"
+                android:layout_width="350sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/rounded_to_edittext"
+                android:hint="Joao"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinza" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="Sobrenome"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/sobrenome_cadastro"
+                style="@style/Widget.AppCompat.AutoCompleteTextView"
+                android:layout_width="350sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/rounded_to_edittext"
+                android:hint="Pereira"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinza" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="Endereço"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/endereco_cadastro"
+                android:layout_width="350sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/rounded_to_edittext"
+                android:hint="Av, 587 - Centro"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinza" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="Email"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/email_cadastro"
+                android:layout_width="350sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/rounded_to_edittext"
+                android:hint="Joao@gmail.com"
+                android:paddingStart="10dp"
+                android:textColorHint="@color/cinza" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="Senha"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_text_input_layout"
+                android:layout_width="350sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/senha_cadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_to_edittext"
+                    android:hint="********"
+                    android:inputType="textPassword"
+                    android:paddingStart="10dp"
+                    android:textColorHint="@color/cinza" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botao_cadastrar"
+                android:layout_width="350sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/rounded_to_button"
+                android:text="Confirmar"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@color/cinza"
+                app:elevation="4dp" />
+
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
